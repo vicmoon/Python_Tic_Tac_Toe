@@ -26,6 +26,20 @@ def make_move(position):
     return redirect(url_for("index"))
 
 
+@app.route("/game_over")
+def game_over():
+    return render_template("game_over.html", winner=session.get("winner"))
+
+
+@app.route('/reset')
+def reset():
+    session.pop('board', None)
+    session.pop('player', None)
+    session.pop('winner', None)
+
+    return redirect(url_for("index"))
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)

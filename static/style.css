@@ -1,13 +1,13 @@
 body {
   text-align: center;
   font-family: Arial, sans-serif;
-  background-color: black;
-  color: aqua;
 }
+
 .board {
   display: inline-block;
   margin-top: 20px;
 }
+
 .cell {
   display: inline-block;
   width: 60px;
@@ -15,12 +15,17 @@ body {
   line-height: 60px;
   font-size: 24px;
   text-align: center;
-  border: 2px solid rgb(76, 109, 178);
+  border: 2px solid black;
   margin: 2px;
-  text-decoration: none;
-  color: rgb(239, 228, 228);
+  cursor: pointer;
 }
+
 .cell:hover {
   background-color: lightgray;
-  color: black;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }
